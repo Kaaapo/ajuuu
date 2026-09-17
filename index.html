@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Vale V - Tito Double P</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pantalla de inicio -->
+    <div id="intro-screen">
+        <div class="intro-content">
+            <div class="intro-badge">CORRIDOS TUMBADOS</div>
+            <h1 class="intro-title">ME VALE V</h1>
+            <p class="intro-artist">TITO DOUBLE P</p>
+            <div class="intro-line"></div>
+            <button id="enter-btn">
+                <span class="btn-icon">▶</span>
+                <span>ENTRAR Y ESCUCHAR</span>
+            </button>
+            <p class="intro-hint">Toca para reproducir la rola</p>
+        </div>
+        <div class="smoke smoke-1"></div>
+        <div class="smoke smoke-2"></div>
+        <div class="smoke smoke-3"></div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="main-content" class="hidden">
+
+        <!-- Header fijo con reproductor -->
+        <header id="player-bar">
+            <div class="player-inner">
+                <div class="player-info">
+                    <span class="player-badge">NOW PLAYING</span>
+                    <span class="player-title">Me Vale V — Tito Double P</span>
+                </div>
+                <div class="player-controls">
+                    <button id="play-pause-btn" class="control-btn" title="Play / Pausa">
+                        <span id="play-icon">▶</span>
+                        <span id="pause-icon" class="hidden">⏸</span>
+                    </button>
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <span class="time-display" id="time-display">0:00 / 0:00</span>
+                    <div class="volume-wrapper">
+                        <span class="volume-icon">🔊</span>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.7">
+                    </div>
+                </div>
+            </div>
+            <!-- Visualizador de audio -->
+            <canvas id="visualizer"></canvas>
+        </header>
+
+        <!-- Hero -->
+        <section id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">TITO DOUBLE P</div>
+                <h1 class="hero-title">
+                    <span class="title-line">ME VALE</span>
+                    <span class="title-line title-accent">V</span>
+                </h1>
+                <p class="hero-sub">Corridos Tumbados · Calle · Sin Filtro</p>
+                <div class="hero-tags">
+                    <span class="tag">#CorridosTumbados</span>
+                    <span class="tag">#TitoDoubleP</span>
+                    <span class="tag">#MeValeV</span>
+                    <span class="tag">#SinFiltro</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>SCROLL PA' LA LETRA</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </section>
+
+        <!-- Sección de letra -->
+        <section id="lyrics-section">
+            <div class="section-header">
+                <div class="section-line"></div>
+                <h2>LA LETRA</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="lyrics-container">
+                <!-- Verso 1 -->
+                <div class="lyric-block" data-delay="0">
+                    <span class="verse-label">INTRO</span>
+                    <p class="lyric-line">Ah, wuh</p>
+                    <p class="lyric-line">Compadre</p>
+                </div>
+
+                <!-- Verso 2 -->
+                <div class="lyric-block" data-delay="100">
+                    <span class="verse-label">VERSO 1</span>
+                    <p class="lyric-line">Me llegan los billetitos de a cienes</p>
+                    <p class="lyric-line">Pa' andar bien perrón, loco en breve</p>
+                    <p class="lyric-line">Compadre, saque la loquerona y la verde</p>
+                    <p class="lyric-line">Ya va pa' largo, se wacha, amanece</p>
+                    <p class="lyric-line highlight">Que está bien ondeadote ese plebe</p>
+                    <p class="lyric-line">Que en la escuela, que los deberes</p>
+                    <p class="lyric-line">Linda manera de gastar en mujeres</p>
+                    <p class="lyric-line highlight">Yo ya no pienso, manifiesto y se viene</p>
+                </div>
+
+                <!-- Coro -->
+                <div class="lyric-block chorus-block" data-delay="200">
+                    <span class="verse-label gold">CORO</span>
+                    <p class="lyric-line chorus">Ahí pa' que wachen qué pedo</p>
+                    <p class="lyric-line chorus">Qué tranza, que el morro creció</p>
+                    <p class="lyric-line chorus big">Y machín pegó</p>
+                    <p class="lyric-line chorus">Un culito me anda meneando</p>
+                    <p class="lyric-line chorus">Y periqueando se puso bien en coto</p>
+                </div>
+
+                <!-- Post-coro -->
+                <div class="lyric-block" data-delay="300">
+                    <span class="verse-label">POST-CORO</span>
+                    <p class="lyric-line">Derecho ando jalando, no soy malandro</p>
+                    <p class="lyric-line">Nomás la finta y lo placosón</p>
+                    <p class="lyric-line">Ya van tres días que no paro</p>
+                    <p class="lyric-line">Pero bien trabado</p>
+                    <p class="lyric-line highlight big">Pues me vale verga, ni modo</p>
+                </div>
+
+                <div class="lyric-divider">
+                    <span class="divider-icon">☠</span>
+                </div>
+
+                <!-- Verso 2 -->
+                <div class="lyric-block" data-delay="100">
+                    <span class="verse-label">VERSO 2</span>
+                    <p class="lyric-line">De aquí pa' allá</p>
+                    <p class="lyric-line">Meneando con calma</p>
+                    <p class="lyric-line highlight">La mente siempre bien macabra</p>
+                    <p class="lyric-line">Ando zumbando, apenas agarré viada</p>
+                    <p class="lyric-line">Rifando macizo generando lana</p>
+                    <p class="lyric-line">Por ahí decían que yo no la amaba</p>
+                    <p class="lyric-line">Que de mañoso tenía fama</p>
+                    <p class="lyric-line highlight">Putas envidias, no sé cómo les cala</p>
+                    <p class="lyric-line">Y cuál "me vale verga", pues no ando en la mana</p>
+                </div>
+
+                <!-- Coro 2 -->
+                <div class="lyric-block chorus-block" data-delay="200">
+                    <span class="verse-label gold">CORO</span>
+                    <p class="lyric-line chorus">Ahí pa' que wachen qué pedo</p>
+                    <p class="lyric-line chorus">Qué tranza, que el morro creció</p>
+                    <p class="lyric-line chorus big">Y machín pegó</p>
+                    <p class="lyric-line chorus">Un culito me anda meneando</p>
+                    <p class="lyric-line chorus">Y periqueando se puso bien en coto</p>
+                </div>
+
+                <!-- Post-coro final -->
+                <div class="lyric-block" data-delay="300">
+                    <span class="verse-label">FINAL</span>
+                    <p class="lyric-line">Derecho ando jalando, no soy malandro</p>
+                    <p class="lyric-line">Nomás la finta y lo placosón</p>
+                    <p class="lyric-line">Ya van tres días que no paro</p>
+                    <p class="lyric-line">Pero bien trabado</p>
+                    <p class="lyric-line highlight big">Me vale verga y ni modo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-title">ME VALE V</span>
+                    <span class="footer-sep">·</span>
+                    <span class="footer-artist">TITO DOUBLE P</span>
+                </div>
+                <p class="footer-sub">Corridos Tumbados · Pa'l Barrio y Pa'l Mundo 🇲🇽</p>
+                <div class="footer-skulls">☠ ☠ ☠</div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio-player" preload="auto">
+        <source src="me-vale-v.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
